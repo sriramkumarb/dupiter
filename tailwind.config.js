@@ -19,4 +19,7 @@ module.exports = {
       'nuxt.config.js'
     ]
   }
+  // fontFamily: {
+  //   'sans': ['oleo script', 'sans-serif']
+  // }
 }

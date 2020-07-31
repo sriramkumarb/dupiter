@@ -1,10 +1,32 @@
-<template>
-  <div class="container">
-    <input type="file" @change="chooseFile($event)" />
-    <select v-model="headerToClean">
-      <option v-for="(h, index) in headers" :key="index" :value="h">{{ h }}</option>
-    </select>
-    <button @click="downloadCSV()">Download</button>
+<template class=" container-full bg-gray-800 w-screen h-screen" >
+  <div>
+    <div class="mx-10 my-10">
+      <h1 class="text-center font-mono text-red-800 text-4xl">
+        <b>
+          <i>Dupiter</i>
+        </b>
+      </h1>
+    </div>
+    <br />
+    <div
+      class="bg-gray-700 text-red-500 lg:mx-64 md:mx-64 p-4 rounded border-transparent mx-10 my-20 shadow-2xl"
+    >
+      <div class="my-10 mx-5 flex justify-center items-center">
+        <input
+          type="file"
+          class="border border-black rounded w-56 bg-white"
+          @change="chooseFile($event)"
+        />
+      </div>
+      <div class="my-10 mx-5 flex justify-center items-center text-center">
+        <select v-model="headerToClean">
+          <option v-for="(h, index) in headers" :key="index" :value="h" class="bg-gray-300">{{ h }}</option>
+        </select>
+      </div>
+      <div class="my-10 mx-5 flex justify-center items-center">
+        <button @click="downloadCSV()">Download</button>
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts">
